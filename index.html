@@ -12,6 +12,8 @@
     th, td { border: 1px solid #ddd; padding: 8px 12px; text-align: left; }
     th { background: #f5f5f5; }
     .updated { color: #888; font-size: 0.9em; }
+    .note { background: #f9f9f9; border-left: 4px solid #2196F3; padding: 12px 16px; margin: 16px 0; font-size: 0.95em; }
+    .small { font-size: 0.9em; color: #555; }
   </style>
 </head>
 <body>
@@ -85,14 +87,43 @@
     <td>광고 게재 및 성과 측정</td>
     <td>광고 식별자, 기기 정보, IP</td>
   </tr>
+  <tr>
+    <td>Apple Inc. (Sign in with Apple)</td>
+    <td>Apple 계정으로 로그인</td>
+    <td>Apple이 제공하는 식별 정보(앱에 전달되는 범위)</td>
+  </tr>
 </table>
-<p>각 서비스의 개인정보 처리에 대해서는 아래를 참고하세요.</p>
+
+<h2>5. 제3자 서비스의 개인정보 처리 및 참고 링크</h2>
+<p>
+  본 앱은 <strong>Google</strong>의 <strong>Firebase</strong>(인증·데이터베이스·서버)와 <strong>AdMob</strong>(광고)을 사용합니다.
+  Google 측 개인정보 처리는 아래 문서로 안내할 수 있으며, 일반적으로
+  <strong>Google 개인정보처리방침</strong>과 <strong>Firebase 개인정보 및 보안</strong> 두 가지로
+  Firebase·AdMob 관련 처리를 함께 설명하는 경우가 많습니다.
+</p>
 <ul>
-  <li><a href="https://policies.google.com/privacy" target="_blank">Google 개인정보처리방침</a></li>
-  <li><a href="https://firebase.google.com/support/privacy" target="_blank">Firebase 개인정보 및 보안</a></li>
+  <li><a href="https://policies.google.com/privacy" target="_blank" rel="noopener noreferrer">Google 개인정보처리방침</a></li>
+  <li><a href="https://firebase.google.com/support/privacy" target="_blank" rel="noopener noreferrer">Firebase 개인정보 및 보안</a></li>
+  <li><a href="https://support.google.com/admob/answer/6128543" target="_blank" rel="noopener noreferrer">AdMob — 광고 및 개인정보 (Google 고객센터)</a> <span class="small">(선택: 광고·측정에 대한 보충 설명)</span></li>
 </ul>
 
-<h2>5. 광고 및 추적</h2>
+<p class="note">
+  <strong>Sign in with Apple</strong>을 사용하는 경우, Apple의 개인정보 처리에 대한 안내는 아래를 참고할 수 있습니다. <span class="small">(필수는 아니나, 스토어·이용자 안내용으로 권장)</span>
+</p>
+<ul>
+  <li><a href="https://www.apple.com/legal/privacy/data/en/sign-in-with-apple/" target="_blank" rel="noopener noreferrer">Apple — Sign in with Apple 및 개인정보</a></li>
+  <li><a href="https://www.apple.com/legal/privacy/" target="_blank" rel="noopener noreferrer">Apple 개인정보 보호 정책</a></li>
+</ul>
+
+<p class="note">
+  <strong>Unity Technologies</strong>의 분석·광고·기타 SDK를 추가로 연동한 경우,
+  해당 서비스의 개인정보처리방침 링크를 이 항목에 <strong>추가</strong>하는 것이 좋습니다.
+  예: <a href="https://unity.com/legal/privacy-policy" target="_blank" rel="noopener noreferrer">Unity 개인정보처리방침</a>
+  · <a href="https://unity.com/legal/game-player-and-app-user-privacy-policy" target="_blank" rel="noopener noreferrer">Unity 게임/앱 이용자 개인정보 정책</a>
+  <br><span class="small">(현재 SumThing에 Unity Analytics 등을 사용하지 않는다면 위 Unity 링크는 문서에서 삭제하셔도 됩니다.)</span>
+</p>
+
+<h2>6. 광고 및 추적</h2>
 <p>
   본 앱은 <strong>Google AdMob</strong>을 사용하여 광고를 표시합니다.
   AdMob은 광고 식별자 및 기기 정보를 수집할 수 있으며,
@@ -103,7 +134,7 @@
   <li>iOS 사용자는 ATT(앱 추적 투명성) 팝업에서 추적을 거부할 수 있습니다.</li>
 </ul>
 
-<h2>6. 이용자의 권리</h2>
+<h2>7. 이용자의 권리</h2>
 <ul>
   <li><strong>계정 삭제:</strong> 앱 내 설정 또는 아래 연락처로 요청하면 계정 및 관련 데이터를 삭제합니다.</li>
   <li><strong>닉네임 변경:</strong> 앱 내에서 변경할 수 있습니다.</li>
@@ -111,26 +142,26 @@
   <li><strong>광고 식별자 초기화:</strong> 기기 설정에서 광고 ID를 재설정할 수 있습니다.</li>
 </ul>
 
-<h2>7. 아동의 개인정보 보호</h2>
+<h2>8. 아동의 개인정보 보호</h2>
 <p>
   본 앱은 만 14세 미만 아동의 개인정보를 의도적으로 수집하지 않습니다.
   만 14세 미만 이용자의 개인정보가 수집된 것을 확인한 경우 즉시 삭제합니다.
 </p>
 
-<h2>8. 로컬 데이터 저장</h2>
+<h2>9. 로컬 데이터 저장</h2>
 <p>
   게임 진행 데이터(점수, 보석, 스테이지 진행 등)는 기기 내부에 로컬로 저장됩니다.
   이 데이터는 서버로 전송되지 않으며, 앱 삭제 시 함께 제거됩니다.
   로그인한 사용자는 온라인 점수만 서버에 별도로 저장됩니다.
 </p>
 
-<h2>9. 개인정보처리방침의 변경</h2>
+<h2>10. 개인정보처리방침의 변경</h2>
 <p>
   본 방침이 변경되는 경우, 변경 사항을 이 페이지에 게시하며
   시행일을 함께 표기합니다.
 </p>
 
-<h2>10. 연락처</h2>
+<h2>11. 연락처</h2>
 <p>
   개인정보 관련 문의 및 계정 삭제 요청은 아래로 연락해 주세요.
 </p>
@@ -164,8 +195,24 @@
 <ul>
   <li><strong>Google Firebase</strong> — Authentication, Firestore database, Cloud Functions.</li>
   <li><strong>Google AdMob</strong> — Ad serving and measurement.</li>
+  <li><strong>Apple (Sign in with Apple)</strong> — When you choose Apple to sign in.</li>
 </ul>
-<p>Please refer to <a href="https://policies.google.com/privacy" target="_blank">Google's Privacy Policy</a> for details.</p>
+<p>
+  For Google’s processing of data related to Firebase and AdMob, the following links are typically sufficient together:
+  <a href="https://policies.google.com/privacy" target="_blank" rel="noopener noreferrer">Google Privacy Policy</a>,
+  <a href="https://firebase.google.com/support/privacy" target="_blank" rel="noopener noreferrer">Firebase Privacy and Security</a>,
+  and optionally <a href="https://support.google.com/admob/answer/6128543" target="_blank" rel="noopener noreferrer">AdMob — Ads and privacy</a>.
+</p>
+<p>
+  For Sign in with Apple, see
+  <a href="https://www.apple.com/legal/privacy/data/en/sign-in-with-apple/" target="_blank" rel="noopener noreferrer">Sign in with Apple &amp; Privacy</a>
+  and <a href="https://www.apple.com/legal/privacy/" target="_blank" rel="noopener noreferrer">Apple Privacy Policy</a>.
+</p>
+<p class="note">
+  If you add <strong>Unity</strong> analytics or other Unity services, add the relevant Unity privacy links here (e.g.
+  <a href="https://unity.com/legal/privacy-policy" target="_blank" rel="noopener noreferrer">Unity Privacy Policy</a>).
+  Remove this paragraph if not applicable.
+</p>
 
 <h2>4. Your Rights</h2>
 <ul>
