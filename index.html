@@ -9,17 +9,18 @@
     h1 { font-size: 1.6em; border-bottom: 2px solid #2196F3; padding-bottom: 8px; }
     h2 { font-size: 1.2em; margin-top: 2em; color: #1565C0; }
     table { border-collapse: collapse; width: 100%; margin: 12px 0; }
-    th, td { border: 1px solid #ddd; padding: 8px 12px; text-align: left; }
+    th, td { border: 1px solid #ddd; padding: 8px 12px; text-align: left; vertical-align: top; }
     th { background: #f5f5f5; }
     .updated { color: #888; font-size: 0.9em; }
     .note { background: #f9f9f9; border-left: 4px solid #2196F3; padding: 12px 16px; margin: 16px 0; font-size: 0.95em; }
     .small { font-size: 0.9em; color: #555; }
+    a { color: #1565C0; }
   </style>
 </head>
 <body>
 
 <h1>SumThing 개인정보처리방침</h1>
-<p class="updated">시행일: 2026년 ○월 ○일 &nbsp;|&nbsp; 최종 수정: 2026년 ○월 ○일</p>
+<p class="updated">시행일: 2026년 5월 26일 &nbsp;|&nbsp; 최종 수정: 2026년 5월 26일</p>
 
 <p>
   <strong>kangagi</strong>(이하 "개발자")은(는) 「개인정보 보호법」 및 관련 법령에 따라
@@ -32,7 +33,7 @@
   <tr><th>구분</th><th>항목</th><th>수집 방법</th></tr>
   <tr>
     <td>계정(소셜 로그인)</td>
-    <td>Google 또는 Apple 계정 고유 식별자(UID), 이메일(선택)</td>
+    <td>Google 또는 Apple 계정 고유 식별자(UID), 이메일(제공·동의 범위 내)</td>
     <td>Firebase Authentication을 통한 로그인 시</td>
   </tr>
   <tr>
@@ -42,8 +43,18 @@
   </tr>
   <tr>
     <td>게임 기록</td>
-    <td>점수, 스테이지 진행 상황, 서바이벌 기록</td>
-    <td>사용자가 '기록 등록' 시 서버 전송</td>
+    <td>점수, 스테이지 진행 상황, 서바이벌 기록, 랭킹·그룹 관련 기록</td>
+    <td>사용자가 온라인 기록 등록·랭킹 참여 시 서버 전송; 그 외 일부는 기기에만 저장</td>
+  </tr>
+  <tr>
+    <td>보석(가상 재화)</td>
+    <td>보석 잔액, 지급·사용 내역(중복 방지용 거래 식별자 포함)</td>
+    <td>로그인 상태에서 광고 보상·인앱결제·게임 내 사용 시 서버(Firebase) 동기화; 비로그인(게스트)은 기기에만 저장 후 로그인 시 병합될 수 있음</td>
+  </tr>
+  <tr>
+    <td>인앱결제</td>
+    <td>구매 상품 ID, 구매 처리 결과(개발자가 신용카드 번호 등 결제수단 정보를 직접 수집하지 않음)</td>
+    <td>Google Play(Android) 등 앱 스토어 결제 시스템을 통한 구매 시</td>
   </tr>
   <tr>
     <td>광고 관련</td>
@@ -53,34 +64,36 @@
   <tr>
     <td>기기·앱 정보</td>
     <td>OS 버전, 앱 버전, 언어 설정</td>
-    <td>Firebase SDK 자동 수집</td>
+    <td>Firebase·광고 SDK 등을 통한 자동 수집</td>
   </tr>
 </table>
 
 <h2>2. 개인정보의 수집·이용 목적</h2>
 <ul>
   <li><strong>계정 관리:</strong> 로그인, 닉네임 표시, 계정 식별</li>
-  <li><strong>게임 서비스:</strong> 온라인 랭킹, 그룹(친구) 경쟁, 점수 기록 저장</li>
+  <li><strong>게임 서비스:</strong> 온라인 랭킹, 그룹(친구) 기능, 점수·기록 저장</li>
+  <li><strong>가상 재화·인앱결제:</strong> 보석 지급·차감, 인앱 상품(보석 패키지·광고 제거 등) 제공 및 중복 지급 방지</li>
   <li><strong>광고:</strong> Google AdMob을 통한 맞춤형/비맞춤형 광고 표시</li>
-  <li><strong>서비스 개선:</strong> 오류 분석, 앱 안정성 향상</li>
+  <li><strong>서비스 개선:</strong> 오류 대응, 앱 안정성·보안(앱 무결성 검사 등) 향상</li>
 </ul>
 
 <h2>3. 개인정보의 보유·이용 기간</h2>
 <ul>
-  <li>회원 탈퇴(계정 삭제) 요청 시 <strong>즉시 파기</strong>합니다.</li>
+  <li>회원 탈퇴(계정 삭제) 요청 시 서버에 저장된 계정·관련 데이터는 <strong>삭제 처리</strong>합니다.</li>
   <li>서비스 이용 중에는 위 목적 범위 내에서 보유합니다.</li>
   <li>관련 법령에 따라 보존이 필요한 경우 해당 기간 동안 보관합니다.</li>
+  <li>비로그인(게스트) 이용 시 기기에만 저장된 데이터는 앱 삭제 또는 기기 초기화 시 제거됩니다.</li>
 </ul>
 
 <h2>4. 개인정보의 제3자 제공</h2>
 <p>개발자는 이용자의 개인정보를 원칙적으로 외부에 제공하지 않습니다.
-다만 아래의 경우 예외로 합니다.</p>
+다만 서비스 제공을 위해 아래 업체·서비스에 처리를 위탁하거나, 해당 서비스 이용 과정에서 정보가 전송될 수 있습니다.</p>
 <table>
   <tr><th>제공받는 자</th><th>목적</th><th>항목</th></tr>
   <tr>
     <td>Google LLC (Firebase)</td>
-    <td>인증, 데이터베이스, 서버 기능</td>
-    <td>UID, 닉네임, 게임 기록</td>
+    <td>인증, 데이터베이스, Cloud Functions(랭킹·보석·계정 삭제 등)</td>
+    <td>UID, 닉네임, 게임 기록, 보석 잔액·거래 관련 정보</td>
   </tr>
   <tr>
     <td>Google LLC (AdMob)</td>
@@ -88,27 +101,34 @@
     <td>광고 식별자, 기기 정보, IP</td>
   </tr>
   <tr>
+    <td>Google LLC (Google Play)</td>
+    <td>Android 인앱결제 처리</td>
+    <td>구매 관련 정보(결제는 스토어가 처리하며, 개발자는 카드번호 등을 받지 않음)</td>
+  </tr>
+  <tr>
     <td>Apple Inc. (Sign in with Apple)</td>
     <td>Apple 계정으로 로그인</td>
-    <td>Apple이 제공하는 식별 정보(앱에 전달되는 범위)</td>
+    <td>Apple이 앱에 전달하는 식별 정보(이용자 설정·Apple 정책 범위)</td>
+  </tr>
+  <tr>
+    <td>Apple Inc. (App Store)</td>
+    <td>iOS 인앱결제 처리(해당 플랫폼 출시 시)</td>
+    <td>구매 관련 정보(결제는 스토어가 처리)</td>
   </tr>
 </table>
 
 <h2>5. 제3자 서비스의 개인정보 처리 및 참고 링크</h2>
 <p>
-  본 앱은 <strong>Google</strong>의 <strong>Firebase</strong>(인증·데이터베이스·서버)와 <strong>AdMob</strong>(광고)을 사용합니다.
-  Google 측 개인정보 처리는 아래 문서로 안내할 수 있으며, 일반적으로
-  <strong>Google 개인정보처리방침</strong>과 <strong>Firebase 개인정보 및 보안</strong> 두 가지로
-  Firebase·AdMob 관련 처리를 함께 설명하는 경우가 많습니다.
+  본 앱은 <strong>Google</strong>의 <strong>Firebase</strong>(인증·데이터베이스·서버 기능)와 <strong>AdMob</strong>(광고)을 사용합니다.
 </p>
 <ul>
   <li><a href="https://policies.google.com/privacy" target="_blank" rel="noopener noreferrer">Google 개인정보처리방침</a></li>
   <li><a href="https://firebase.google.com/support/privacy" target="_blank" rel="noopener noreferrer">Firebase 개인정보 및 보안</a></li>
-  <li><a href="https://support.google.com/admob/answer/6128543" target="_blank" rel="noopener noreferrer">AdMob — 광고 및 개인정보 (Google 고객센터)</a> <span class="small">(선택: 광고·측정에 대한 보충 설명)</span></li>
+  <li><a href="https://support.google.com/admob/answer/6128543" target="_blank" rel="noopener noreferrer">AdMob — 광고 및 개인정보</a></li>
 </ul>
 
 <p class="note">
-  <strong>Sign in with Apple</strong>을 사용하는 경우, Apple의 개인정보 처리에 대한 안내는 아래를 참고할 수 있습니다. <span class="small">(필수는 아니나, 스토어·이용자 안내용으로 권장)</span>
+  <strong>Sign in with Apple</strong>을 사용하는 경우:
 </p>
 <ul>
   <li><a href="https://www.apple.com/legal/privacy/data/en/sign-in-with-apple/" target="_blank" rel="noopener noreferrer">Apple — Sign in with Apple 및 개인정보</a></li>
@@ -116,138 +136,139 @@
 </ul>
 
 <p class="note">
-  본 앱은 <strong>Unity</strong> 엔진으로 제작·배포됩니다. Unity Technologies는 앱 실행과 관련하여
-  기술·운영 목적의 정보를 처리할 수 있으며, 자세한 내용은 Unity의 개인정보 관련 문서를 참고하실 수 있습니다.
+  본 앱은 <strong>Unity</strong> 엔진으로 제작·배포됩니다. Unity Technologies는 앱 실행과 관련한 기술·운영 목적의 정보를 처리할 수 있습니다.
+  <strong>현재 본 앱은 Unity Analytics를 연동하지 않습니다.</strong>
 </p>
 <ul>
-  <li><a href="https://unity.com/legal/privacy-policy" target="_blank" rel="noopener noreferrer">Unity 개인정보처리방침 (Privacy Policy)</a></li>
+  <li><a href="https://unity.com/legal/privacy-policy" target="_blank" rel="noopener noreferrer">Unity 개인정보처리방침</a></li>
   <li><a href="https://unity.com/legal/game-player-and-app-user-privacy-policy" target="_blank" rel="noopener noreferrer">Unity 게임·앱 이용자 개인정보 정책</a></li>
 </ul>
-<p class="small">
-  앱에 <strong>Unity Analytics</strong> 등 Unity의 분석·광고용 SDK를 별도로 연동한 경우,
-  해당 서비스에 따라 수집 항목이 달라질 수 있으므로, 출시 전에 Unity 대시보드·문서와 앱 설정을 함께 확인하는 것을 권장합니다.
-</p>
-  
+
 <h2>6. 광고 및 추적</h2>
 <p>
   본 앱은 <strong>Google AdMob</strong>을 사용하여 광고를 표시합니다.
-  AdMob은 광고 식별자 및 기기 정보를 수집할 수 있으며,
-  EU/EEA 지역 사용자에게는 GDPR에 따른 동의를 요청합니다.
+  EU/EEA 등 일부 지역에서는 Google <strong>UMP(사용자 메시지 플랫폼)</strong> 등을 통해 광고·개인정보 관련 동의를 요청할 수 있습니다.
 </p>
 <ul>
-  <li>광고 개인화를 원하지 않는 경우, 기기의 광고 설정에서 '광고 추적 제한'을 활성화할 수 있습니다.</li>
-  <li>iOS 사용자는 ATT(앱 추적 투명성) 팝업에서 추적을 거부할 수 있습니다.</li>
+  <li>광고 개인화를 원하지 않는 경우, 기기의 광고 설정에서 ‘광고 추적 제한’ 등을 활성화할 수 있습니다.</li>
+  <li>iOS 사용자는 ATT(앱 추적 투명성)에서 추적을 거부할 수 있습니다.</li>
 </ul>
 
 <h2>7. 이용자의 권리</h2>
 <ul>
-  <li><strong>계정 삭제:</strong> 앱 내 설정 또는 아래 연락처로 요청하면 계정 및 관련 데이터를 삭제합니다.</li>
+  <li><strong>계정·데이터 삭제:</strong>
+    <a href="https://kangagi.github.io/delete-account.html">계정/데이터 삭제 안내</a>에 적힌 방법 또는 아래 이메일로 요청할 수 있습니다.</li>
   <li><strong>닉네임 변경:</strong> 앱 내에서 변경할 수 있습니다.</li>
-  <li><strong>개인정보 열람·정정·삭제:</strong> 아래 연락처를 통해 요청할 수 있습니다.</li>
+  <li><strong>개인정보 열람·정정·삭제:</strong> 아래 연락처로 요청할 수 있습니다.</li>
   <li><strong>광고 식별자 초기화:</strong> 기기 설정에서 광고 ID를 재설정할 수 있습니다.</li>
 </ul>
 
 <h2>8. 아동의 개인정보 보호</h2>
 <p>
   본 앱은 만 14세 미만 아동의 개인정보를 의도적으로 수집하지 않습니다.
-  만 14세 미만 이용자의 개인정보가 수집된 것을 확인한 경우 즉시 삭제합니다.
+  만 14세 미만 이용자의 개인정보가 수집된 것을 확인한 경우 지체 없이 삭제합니다.
 </p>
 
-<h2>9. 로컬 데이터 저장</h2>
-<p>
-  게임 진행 데이터(점수, 보석, 스테이지 진행 등)는 기기 내부에 로컬로 저장됩니다.
-  이 데이터는 서버로 전송되지 않으며, 앱 삭제 시 함께 제거됩니다.
-  로그인한 사용자는 온라인 점수만 서버에 별도로 저장됩니다.
-</p>
+<h2>9. 로컬 저장 및 서버 저장</h2>
+<ul>
+  <li><strong>기기에만 저장:</strong> 비로그인(게스트) 보석·일부 게임 진행 데이터, 광고 제거 구매 여부(기기 설정) 등</li>
+  <li><strong>서버에 저장(로그인 시):</strong> 닉네임, 온라인 점수·랭킹·그룹 정보, <strong>보석 잔액 및 지급·사용 처리</strong> 등 Firebase에 저장되는 데이터</li>
+  <li>로그인 후 게스트 시절의 보석 변동분은 계정에 병합될 수 있습니다.</li>
+  <li>앱 삭제 시 기기 로컬 데이터는 제거되며, 서버 데이터는 계정 삭제 요청 시 삭제합니다.</li>
+</ul>
 
 <h2>10. 개인정보처리방침의 변경</h2>
 <p>
   본 방침이 변경되는 경우, 변경 사항을 이 페이지에 게시하며
-  시행일을 함께 표기합니다.
+  시행일·최종 수정일을 함께 표기합니다.
 </p>
 
 <h2>11. 연락처</h2>
-<p>
-  개인정보 관련 문의 및 계정 삭제 요청은 아래로 연락해 주세요.
-</p>
+<p>개인정보 관련 문의 및 계정·데이터 삭제 요청:</p>
 <ul>
   <li><strong>개발자:</strong> kangagi</li>
   <li><strong>이메일:</strong> <a href="mailto:kangagi97@naver.com">kangagi97@naver.com</a></li>
+  <li><strong>웹사이트:</strong> <a href="https://kangagi.github.io/">https://kangagi.github.io/</a></li>
 </ul>
 
 <hr>
 
 <h1 style="margin-top: 3em;">Privacy Policy — SumThing</h1>
-<p class="updated">Effective: ○○, 2026</p>
+<p class="updated">Effective: May 26, 2026 · Last updated: May 26, 2026</p>
 
 <h2>1. Information We Collect</h2>
 <ul>
-  <li><strong>Account:</strong> Google or Apple account identifier (UID) via Firebase Authentication.</li>
+  <li><strong>Account:</strong> Google or Apple user ID (UID) and email when provided, via Firebase Authentication.</li>
   <li><strong>Nickname:</strong> Display name you set (2–12 characters).</li>
-  <li><strong>Game Data:</strong> Scores and stage progress submitted to our server at your request.</li>
-  <li><strong>Advertising:</strong> Advertising ID (GAID/IDFA), device info, and IP address collected automatically by Google AdMob.</li>
-  <li><strong>Device Info:</strong> OS version, app version, language — collected by Firebase SDK.</li>
+  <li><strong>Game data:</strong> Scores, progress, leaderboard and group-related data when you use online features.</li>
+  <li><strong>Virtual currency (gems):</strong> Balance and grant/spend records on our server when signed in; guest play may store gems locally until you sign in and merge.</li>
+  <li><strong>In-app purchases:</strong> Product IDs and purchase results. Payment card data is processed by the app store, not by the developer.</li>
+  <li><strong>Advertising:</strong> Advertising ID (GAID/IDFA), device data, IP — collected by Google AdMob.</li>
+  <li><strong>Device/app info:</strong> OS version, app version, language — via Firebase and ad SDKs.</li>
 </ul>
 
 <h2>2. How We Use Your Information</h2>
 <ul>
-  <li>Provide login, leaderboard, and group features.</li>
-  <li>Display advertisements via Google AdMob.</li>
-  <li>Improve app stability and fix errors.</li>
+  <li>Account login, nicknames, leaderboards, and groups.</li>
+  <li>Gem grants, spends, and in-app products (gem packs, ad removal).</li>
+  <li>Ads through Google AdMob.</li>
+  <li>Service reliability and security.</li>
 </ul>
 
-<h2>3. Third-Party Services</h2>
+<h2>3. Retention</h2>
 <ul>
-  <li><strong>Google Firebase</strong> — Authentication, Firestore database, Cloud Functions.</li>
-  <li><strong>Google AdMob</strong> — Ad serving and measurement.</li>
-  <li><strong>Apple (Sign in with Apple)</strong> — When you choose Apple to sign in.</li>
+  <li>Server data is deleted when you request account deletion.</li>
+  <li>Guest-only local data is removed when you uninstall the app or reset the device.</li>
 </ul>
-  
+
+<h2>4. Third-Party Processors</h2>
+<ul>
+  <li><strong>Google Firebase</strong> — Auth, database, Cloud Functions (scores, gems, account deletion).</li>
+  <li><strong>Google AdMob</strong> — Ads and measurement.</li>
+  <li><strong>Google Play / Apple App Store</strong> — In-app purchase processing.</li>
+  <li><strong>Sign in with Apple</strong> — When you choose Apple to sign in.</li>
+</ul>
 <p>
-  For Google’s processing of data related to Firebase and AdMob, the following links are typically sufficient together:
+  See
   <a href="https://policies.google.com/privacy" target="_blank" rel="noopener noreferrer">Google Privacy Policy</a>,
   <a href="https://firebase.google.com/support/privacy" target="_blank" rel="noopener noreferrer">Firebase Privacy and Security</a>,
-  and optionally <a href="https://support.google.com/admob/answer/6128543" target="_blank" rel="noopener noreferrer">AdMob — Ads and privacy</a>.
-</p>
-<p>
-  For Sign in with Apple, see
-  <a href="https://www.apple.com/legal/privacy/data/en/sign-in-with-apple/" target="_blank" rel="noopener noreferrer">Sign in with Apple &amp; Privacy</a>
-  and <a href="https://www.apple.com/legal/privacy/" target="_blank" rel="noopener noreferrer">Apple Privacy Policy</a>.
-</p>
-<p>
-  This app is built and distributed using the <strong>Unity</strong> engine. Unity Technologies may process
-  certain technical or operational data in connection with running the app. For details, see:
-  <a href="https://unity.com/legal/privacy-policy" target="_blank" rel="noopener noreferrer">Unity Privacy Policy</a>
   and
-  <a href="https://unity.com/legal/game-player-and-app-user-privacy-policy" target="_blank" rel="noopener noreferrer">Unity Game and App User Privacy Policy</a>.
+  <a href="https://support.google.com/admob/answer/6128543" target="_blank" rel="noopener noreferrer">AdMob — Ads and privacy</a>.
 </p>
 <p class="small">
-  If you enable additional Unity services (e.g. Unity Analytics), collection may differ — check your Unity project settings and documentation.
+  This app is built with <strong>Unity</strong>. We do <strong>not</strong> currently use Unity Analytics.
 </p>
-<h2>4. Your Rights</h2>
+
+<h2>5. Ads and Consent</h2>
+<p>
+  We use Google AdMob. In some regions (e.g. EU/EEA), we may show consent through Google’s User Messaging Platform (UMP).
+</p>
+
+<h2>6. Your Rights</h2>
 <ul>
-  <li>Request account and data deletion via the contact below.</li>
-  <li>Change your nickname within the app.</li>
-  <li>Reset your advertising ID in your device settings.</li>
-  <li>For EU/EEA users: withdraw consent for personalized ads at any time.</li>
+  <li>Account and data deletion: see our
+    <a href="https://kangagi.github.io/delete-account.html">Account &amp; data deletion page</a> or email below.</li>
+  <li>Change your nickname in the app.</li>
+  <li>Reset your advertising ID in device settings.</li>
 </ul>
 
-<h2>5. Children's Privacy</h2>
-<p>We do not knowingly collect personal information from children under 14. If we become aware of such collection, we will delete it promptly.</p>
+<h2>7. Local vs. Server Storage</h2>
+<ul>
+  <li><strong>Local only:</strong> Guest gems and some progress; ad-free flag on device.</li>
+  <li><strong>Server (when signed in):</strong> Nickname, online scores, <strong>gem balance and transactions</strong>, and related Firebase data.</li>
+</ul>
 
-<h2>6. Data Retention</h2>
-<p>Your data is retained while your account is active and deleted upon your request.</p>
+<h2>8. Children</h2>
+<p>We do not knowingly collect personal information from children under 14.</p>
 
-<h2>7. Local Storage</h2>
-<p>Game progress (scores, gems, stages) is stored locally on your device and is not transmitted to our servers unless you explicitly submit scores online.</p>
+<h2>9. Changes</h2>
+<p>We may update this policy on this page with a new effective date.</p>
 
-<h2>8. Changes to This Policy</h2>
-<p>We may update this policy and will post changes on this page with the effective date.</p>
-
-<h2>9. Contact</h2>
+<h2>10. Contact</h2>
 <ul>
   <li><strong>Developer:</strong> kangagi</li>
   <li><strong>Email:</strong> <a href="mailto:kangagi97@naver.com">kangagi97@naver.com</a></li>
+  <li><strong>Website:</strong> <a href="https://kangagi.github.io/">https://kangagi.github.io/</a></li>
 </ul>
 
 </body>
