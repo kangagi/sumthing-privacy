@@ -14,6 +14,7 @@
     th { background: #f5f5f5; }
     .updated { color: #888; font-size: 0.95em; }
     .note { background: #f9f9f9; border-left: 4px solid #2196F3; padding: 12px 16px; margin: 16px 0; font-size: 0.95em; }
+    .warn { background: #fff6f6; border-left: 4px solid #d64545; padding: 12px 16px; margin: 16px 0; font-size: 0.95em; }
     .small { font-size: 0.92em; color: #555; }
     a { color: #1565C0; }
     hr { border: 0; border-top: 1px solid #e5e5e5; margin: 42px 0; }
@@ -95,11 +96,18 @@
 
 <h2>3. 개인정보의 보유·이용 기간</h2>
 <ul>
-  <li><strong>계정 삭제 시:</strong> 이용자가 계정 삭제를 진행(앱 내 또는 이메일 요청)하면 서버에 저장된 계정 및 관련 데이터는 삭제 처리합니다.</li>
   <li><strong>서비스 이용 중:</strong> 서비스 제공 목적 범위 내에서 보유·이용합니다.</li>
+  <li><strong>계정 삭제 시:</strong> 이용자가 앱 내 <strong>계정 삭제</strong> 기능을 통해 삭제를 진행하면 서버에 저장된 계정 및 관련 데이터는 삭제 처리합니다.</li>
+  <li><strong>이메일 문의(예외):</strong> 이용자가 앱 실행/로그인이 불가능한 등 예외 상황에서 이메일로 삭제를 문의할 수 있습니다. 이 경우 오삭제/악용 방지를 위해 <strong>요청자 본인 확인(계정 소유권 확인)</strong> 절차가 필요하며, 확인이 불가능하면 삭제를 진행하지 않을 수 있습니다.</li>
   <li><strong>법령 및 분쟁 대응:</strong> 관련 법령 준수 또는 분쟁 대응을 위해 최소한의 로그를 <strong>최대 90일</strong> 보관할 수 있습니다.</li>
   <li><strong>게스트(비로그인):</strong> 기기에만 저장된 데이터는 앱 삭제 또는 기기 저장공간 삭제 시 제거됩니다.</li>
 </ul>
+
+<div class="warn">
+  <strong>닉네임만으로 삭제하지 않습니다.</strong><br>
+  계정 삭제는 보안을 위해 <strong>앱 내에서 로그인 후 직접 삭제</strong>하는 방법을 권장합니다.
+  이메일 문의만으로 계정 소유권을 확인할 수 없는 경우(예: 닉네임만 제공 등) 삭제를 진행하지 않을 수 있습니다.
+</div>
 
 <h2>4. 개인정보의 제3자 제공 및 처리위탁</h2>
 <p>
@@ -166,7 +174,8 @@
 
 <h2>7. 이용자의 권리 및 행사 방법</h2>
 <ul>
-  <li><strong>계정·데이터 삭제:</strong> 앱 내 <strong>계정 삭제</strong> 기능을 이용하거나, 아래 이메일로 요청할 수 있습니다.
+  <li><strong>계정·데이터 삭제:</strong> 기본적으로 앱 내 <strong>계정 삭제</strong> 기능을 이용할 수 있습니다.
+    앱 실행/로그인이 불가능한 예외 상황에서는 이메일로 문의할 수 있으며, 이 경우 <strong>본인 확인(계정 소유권 확인)</strong>이 필요합니다.
     자세한 절차는 <a href="https://kangagi.github.io/delete-account.html">계정/데이터 삭제 안내 페이지</a>를 참고해 주세요.</li>
   <li><strong>닉네임 변경:</strong> 앱 내에서 변경할 수 있습니다.</li>
   <li><strong>개인정보 관련 문의:</strong> 아래 연락처로 문의할 수 있습니다.</li>
@@ -271,11 +280,19 @@
 
 <h2>3. Retention</h2>
 <ul>
-  <li><strong>Account deletion:</strong> When you delete your account in the app (or request by email), we delete server-stored account data and related records.</li>
   <li><strong>While using the service:</strong> We retain data as needed to provide the service.</li>
+  <li><strong>Account deletion (in-app):</strong> When you delete your account using the in-app <strong>Delete account</strong> feature, we delete server-stored account data and related records.</li>
+  <li><strong>Email support (exceptional cases):</strong> If you cannot run the app or sign in (e.g., lost device), you may contact us by email.
+    To prevent accidental deletion or abuse, we may require <strong>verification of account ownership</strong>. If we cannot verify ownership, we may refuse the deletion request.</li>
   <li><strong>Legal/dispute:</strong> We may retain minimal logs for up to <strong>90 days</strong> to comply with law or handle disputes.</li>
   <li><strong>Guest users:</strong> Local-only data can be removed by uninstalling the app or clearing app storage.</li>
 </ul>
+
+<div class="warn">
+  <strong>We do not delete accounts based on nickname alone.</strong><br>
+  For security reasons, we recommend deleting your account while signed in using the in-app <strong>Delete account</strong> feature.
+  If ownership cannot be verified (e.g., nickname only), we may refuse the request.
+</div>
 
 <h2>4. Third-Party Services (Processors)</h2>
 <p>We do not sell your personal information. We may use the following services to operate the app:</p>
@@ -328,7 +345,8 @@
 
 <h2>7. Your Rights</h2>
 <ul>
-  <li><strong>Account &amp; data deletion:</strong> Use the in-app <strong>Delete account</strong> feature or request by email.
+  <li><strong>Account &amp; data deletion:</strong> You can delete your account using the in-app <strong>Delete account</strong> feature.
+      In exceptional cases where you cannot access the app, you may contact us by email; verification of ownership may be required.
       See <a href="https://kangagi.github.io/delete-account.html">our deletion page</a> for details.</li>
   <li><strong>Change nickname:</strong> You can change your nickname in the app.</li>
   <li><strong>Advertising ID:</strong> You can reset your advertising ID in device settings.</li>
